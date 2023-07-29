@@ -1,0 +1,5 @@
+{
+  "port": 3000,
+  "uploadDir": "./uploads",
+  "downloadDir": "./html"
+}

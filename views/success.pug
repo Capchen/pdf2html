@@ -1,0 +1,25 @@
+extends layout
+
+block content
+  h1(style="color:#7adeb2") Congratulations🎉
+  div()#downloadBtn.download-btn 
+    span 下载文件
+    span#fileName #{fileName}
+  div()#backUpload.download-btn 
+    a(href='/',style="color:#fff") 继续转化
+
+  script.
+      const downloadBtn = document.querySelector('#downloadBtn')
+      const name = document.querySelector('#fileName').innerText
+      downloadBtn.addEventListener('click', (e) => {
+        fetch(`./downloadPdf?fileName=${name}`).then(rs => {
+          return rs.blob()
+        }).then(blob => {
+          // 去掉文件名中的时间戳
+          const originName = name.split('_')[1]
+          const a = document.createElement('a')
+          a.href = URL.createObjectURL(blob)
+          a.download = originName
+          a.click()
+        })
+      })

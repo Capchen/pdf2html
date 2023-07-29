@@ -1,0 +1,77 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background: url('../images/gradients_11.jpeg') no-repeat;
+  background-size: cover;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.form-upload {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.title {
+  text-align: center;
+  color: #00B7FF;
+  font-size: 30px;
+  font-weight: 300;
+  margin-bottom: 30px;
+}
+
+.upload-item {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#fileUpload {
+  
+}
+
+.upload-btn {
+  display: inline-block;
+  width: 100px;
+  height: 30px;
+  background: #00B7FF;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+  text-align: center;
+  line-height: 30px;
+  float: right;
+}
+
+.download-btn {
+  width: 100px;
+  height: 30px;
+  background: #00B7FF;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+  text-align: center;
+  line-height: 30px;
+  margin: 0 auto;
+  margin-top: 200px;
+}
+
+.loading-wrapper {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0,0,0,0.5);
+  color: #fff;
+  text-align: center;
+  line-height: 100vh;
+  display: none;
+}

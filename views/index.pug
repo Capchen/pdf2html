@@ -1,0 +1,26 @@
+
+extends layout
+
+block content
+  h1.title() PDF 转化为 HTML
+  div#loading.loading-wrapper 上传转化中...
+  form#fileForm.form-upload(action="/uploadpdf" method="post" enctype="multipart/form-data")
+    div.upload-item
+      label(for="fileUpload" style='margin-right: 20px') 请选择pdf文件:
+      input#fileUpload(type="file" name="fileUpload" accept=".pdf")
+    div(style='width:20px;height:20px;')
+    input#uploadInput.upload-btn(type="submit" value="确认上传")
+    div#clearFile.upload-btn(style="margin-right:20px") 清空文件
+   
+
+  script.
+    const btn = document.querySelector('#uploadInput')
+    const clearFile = document.querySelector('#clearFile')
+    const fileForm = document.querySelector('#fileForm')
+    const loading = document.querySelector('#loading')
+    btn.addEventListener('click', () => {
+      loading.style.display = 'block'
+    })
+    clearFile.addEventListener('click', () => {
+      fileForm.reset()
+    })
